@@ -49,4 +49,16 @@ table {
 	border-spacing: 0;
 }
 
-h1 {}
+h1 {font: 1rem Arial, sans-serif;
+	Color: #008B8B;
+	}
+
+nav {display: flex; 
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.nav a {background-color: #2F4F4F;
+	color: white;
+	
+}
