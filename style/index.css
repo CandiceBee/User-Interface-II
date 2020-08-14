@@ -24,11 +24,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
     line-height: 1;
     background-color: #FFFAF0;
@@ -36,29 +32,46 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-h1 {font: 1rem Arial, sans-serif;
+.header h1 {
+	font: 1rem Arial, sans-serif;
 	Color: #008B8B;
 	}
 
-nav {display: flex; 
+.header nav {
+	display: flex; 
 	flex-direction: row;
 	justify-content: flex-start;
+	width: vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;}
+
+.header nav a {
+	background-color: #2F4F4F;
+	color: white;
+	max-width: 5rem;
+	margin: 1rem;
+    padding: 0.5rem;
+    border-radius: .6rem;
+    font-size: .75rem;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-decoration: none;	
 }
 
-.nav a {background-color: #2F4F4F;
-	color: white;
-	
+section {
+	margin: 0 auto;
+	width: 30%;
+}
+
+.Gallery {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
