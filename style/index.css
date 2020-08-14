@@ -1,8 +1,9 @@
 
 body {
     line-height: 1;
-    background-color: blue;
+    background-color: #FFFAF0;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -13,18 +14,20 @@ table {
 }
 
 .header h1 {
-	font: 1rem Arial, sans-serif;
+	font: 2rem Arial, sans-serif;
 	Color: #008B8B;
+	text-align: left;
+	padding: 1rem;
 	}
 
 .header nav {
 	display: flex; 
 	flex-direction: row;
 	justify-content: flex-start;
-	width: vw;
     display: flex;
     justify-content: center;
-    align-content: space-around;}
+	align-content: space-around;
+	padding: 1rem;}
 
 .header nav a {
 	background-color: #2F4F4F;
@@ -32,15 +35,16 @@ table {
 	max-width: 5rem;
 	margin: 1rem;
     padding: 0.5rem;
-    border-radius: .6rem;
-    font-size: .75rem;
-    font-family: 'Roboto Mono', monospace;
+    font: .75rem Arial, san-serif;
     text-align: center;
     text-decoration: none;	
 }
 
 .About-me {
-	display: block;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -60,13 +64,32 @@ section {
 	width: 200px;
 }
 
-.Gallery img {
-	max-width: 100%;
-}
-
 .Gallery h3 {
 	padding: .75rem;
 	text-align: center;
 	color: black;
 }
 
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer a {
+	background-color: #2F4F4F;
+	color: white;
+	max-width: 5rem;
+	margin: 1rem;
+    padding: 0.5rem;
+    font: .75rem Arial, san-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer h2 {
+	font: 1.6rem Arial, sans-serif;
+	Color: #008B8B;
+	text-align: center;
+	padding: 1rem;
+}
