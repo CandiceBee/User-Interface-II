@@ -232,7 +232,7 @@ footer h2 {
 
 	.about-me {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 		font-weight: bolder;
 		font-family: sans-serif;
 		max-width: 100%;
