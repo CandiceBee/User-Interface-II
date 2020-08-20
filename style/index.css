@@ -49,23 +49,30 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+	box-sizing: border-box;
+}
 
-.header h1 {
+header {
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+header h1 {
 	font: 4rem Arial, sans-serif;
 	Color: #008B8B;
-	text-align: left;
-	padding: 1rem 0 0 2rem;
+	padding-left: 1rem;
 	}
 
-.header nav {
+header nav {
 	display: flex; 
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: space-around;
-	padding: 0 0 1rem 1rem;
 }
 
-.header nav a {
+header nav a {
 	background-color: #2F4F4F;
 	color: white;
 	margin: 1rem;
@@ -77,26 +84,25 @@ table {
 
 .about-me {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	padding: 0 0 1rem 2rem;
-	max-width: 1150px;
+	flex-flow: row wrap;
+	align-items: center;	
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1240px;
+	
 }
 
-.about-me img {
+.leftside {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: baseline;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
 }
 
-.about-me h3 {
-	padding: .75rem;
-	text-align: center;
-	color: black;
-	max-width: 400px;
+.leftside img {
+	width: 400px;
+	height: 400px;
 }
 
  .rightside {
@@ -114,24 +120,28 @@ table {
     font: .75rem Arial, san-serif;
     text-align: center;
 	text-decoration: none;
-	
-
 }
 
 .flexboxes {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;	
-	justify-content: center;
-	
+	justify-content: space-between;
+	margin: 0 auto; 
+	max-width: 1240px;
 }
 
 .Gallery {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 1.6rem;
+	justify-content: space-evenly;
+	padding: 2rem;
+}
+
+.Gallery img{
+	width: 200px;
+	height: 200px;
 }
 
 .Gallery h3 {
@@ -141,35 +151,38 @@ table {
 	max-width: 180px;
 }
 
-.footer {
+footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 5rem;
 }
 
-.footer a {
+footer a {
 	background-color: #2F4F4F;
 	color: white;
-	max-width: 5rem;
-	margin: 1rem;
-    padding: 0.5rem;
-    font: .75rem Arial, san-serif;
+	/* max-width: 15rem; */
+	/* margin: 1rem; */
+    padding: 1rem;
+    font: 1rem Arial, san-serif;
     text-align: center;
-    text-decoration: none;
+	text-decoration: none;
+	font-weight: bolder;
 }
 
-.footer h2 {
+footer h2 {
 	font: 1.6rem Arial, sans-serif;
 	Color: #008B8B;
 	text-align: center;
 	padding: 1rem;
+	font-weight: bolder;
 }
 
 /*  End of Footer section styles */
 
 @media screen and (max-width:800px)
  {
-	.header {
+	header {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -177,7 +190,11 @@ table {
 		font-family: sans-serif;
 	}
 
-	.header nav {
+	header h1{
+		padding: 3%;
+	}
+
+	header nav {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
@@ -190,10 +207,21 @@ table {
 		flex-direction: column-reverse;
 		font-weight: bolder;
 		font-family: sans-serif;
+		max-width: 100%;
+		height: auto;
 	}
+
+	 .leftside {
+		width: 100%;
+		height: auto;
+		padding: 3%;
+	} 
 
 	.rightside {
 		padding: 3%;
+		align-content: center;
+		text-align: center;
+		max-width: 90%;
 	}
 
 	.flexboxes {
@@ -205,6 +233,77 @@ table {
 		font-weight: bolder;
 		font-family: sans-serif;
 		max-width: 90%;
+		padding-top: 1rem;
 	}
 
+	footer a {
+		background-color: #2F4F4F;
+		color: white;
+		/* margin: 1rem; */
+		font: 1rem Arial, san-serif;
+		font-weight: bolder;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	footer h2 {
+		font: 1.6rem Arial, sans-serif;
+		font-weight: bolder;
+		Color: #008B8B;
+		text-align: center;
+		padding: 1rem;
+	}
+}
+
+@media screen and (max-width:500px)
+{
+	* {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+		max-width: 100%;
+		margin: 0 auto;
+		max-height: auto;
+	}
+
+	header h1 {
+
+	}
+	header nav {
+		display: flex;
+		flex-flow: column;
+	}
+	
+	header nav a {
+		border: ivory 1px solid;
+		font-weight: bolder;
+		font-size: 1rem;
+		padding: 5%;
+		margin: inherit;
+	}	
+
+	.rightside {
+		width: 100%;
+	}
+
+	.leftside img {
+		width: 100%;
+		height: auto;
+	}
+
+	.flexboxes {
+		width: 100%;
+	}
+
+	.Gallery img {
+		width: 100%;
+		height: auto;
+	}
+	.Gallery h3{
+		max-width: 100%;
+		height: auto;
+		font-weight: bolder;
+		font-size: 1rem;
+		text-align: center;
+	}
 }
